@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="../lib/w3.css">
     <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../lib/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.w3school.com/lib/w3-theme-green.css">
     <style>
         html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
         .w3-sidenav a {padding:16px;}
+        .w3-accordion-content {height:400px;overflow-y: scroll}
     </style>
 </head>
 <body>
@@ -18,12 +20,13 @@
     <a href="javascript:void(0)" class="w3-light-green"><img src="../image/img_avatar3.png" style="width:10%;"> User icon and name</a>
     <a href="javascript:void(0)" onclick="to_close()" class="w3-hide-large w3-closenav w3-large">Close X</a>
     <a href="javascript:void(0)" class="w3-white w3-btn w3-hover-red w3-left-align" onclick="document.getElementById('new_mail').style.display='block'">New Mail <i class="fa fa-edit"></i></a>
-    <div class="w3-accordion"> <!-- show list of emails in inbox folder -->
+    <div id="LabelList" class="w3-accordion"> <!-- show list of emails in inbox folder -->
         <a id="Inbox" onclick="showMail(this.id)" href="javascript:void(0)"><i class="fa fa-inbox"></i> Inbox <i class="fa fa-caret-down"></i></a>
         <div id="InboxList" class="w3-accordion-content w3-animate-left">
             <!-- add element in functions -->
         </div>
     </div>
+    <a class="w3-btn w3-white w3-hover-light-grey w3-left-align" onclick="document.getElementById('new_label').style.display='block'">Create New Label</a>
 </nav>
 
 <!-- Model pop-up for new mail editor-->
@@ -54,6 +57,12 @@
         </div>
     </div>
 </div>
+
+<!-- Model pop-up for new mail editor-->
+<div id="new_label" class="w3-modal" style="z-index: 4">
+
+</div>
+
 
 <!-- Overlay effect when opening the side navigation on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer"></div>
