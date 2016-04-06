@@ -56,3 +56,30 @@ function sendMail(){
     var body = document.getElementById("body").valueOf();
     var message = subject + "\n\n" + body;
 }
+function addNewLabel(){
+    var label_name = document.getElementById("label_name").value;
+    if (document.getElementById(label_name) !=  null)
+        return;
+    var new_label = document.createElement("div");
+    new_label.setAttribute("class", "w3-accordion");
+    var new_label_btn = document.createElement("a");
+    new_label_btn.setAttribute("href", "javascript:void(0)");
+    new_label_btn.setAttribute("id", label_name);
+    new_label_btn.setAttribute("onclick", "openMail(this.id);to_close();");
+    new_label_btn.innerHTML = "<i class='fa fa-inbox'></i> " + label_name + " <i class='fa fa-caret-down'></i>";
+    var new_label_list = document.createElement("div");
+    new_label_list.setAttribute("id", label_name+"List");
+    new_label_list.setAttribute("class", "w3-accordion-content w3-animate-left");
+    new_label.appendChild(new_label_btn);
+    new_label.appendChild(new_label_list);
+    document.getElementById("LabelList").appendChild(new_label);
+    /*data[label_name] = [];
+    var fs = require("fs");
+    fs.writeFile("emailbox.json", JSON.stringify(data, null, 4), function(err){
+        if (err){
+            console.log(err);
+        } else {
+            console.log("JSON saved");
+        }
+    });*/
+}
