@@ -60,7 +60,24 @@
 
 <!-- Model pop-up for new mail editor-->
 <div id="new_label" class="w3-modal" style="z-index: 4">
-
+    <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-padding w3-red">
+            <span onclick="document.getElementById('new_label').style.display='none'" class="w3-right w3-xxlarge w3-closebtn"><i class="fa fa-remove"></i></span>
+            <h2>New Label</h2>
+        </div>
+        <div class="w3-container">
+            <form class="w3-container">
+                <p>
+                    <label>New Label:</label>
+                    <input id="label_name" class="w3-input w3-border" type="text">
+                </p>
+                <p>
+                    <a class="w3-btn w3-large w3-red" onclick="document.getElementById('new_label').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+                    <input class="w3-btn w3-large w3-right w3-light-green" onclick="addNewLabel()" type="submit" value="Create">
+                </p>
+            </form>
+        </div>
+    </div>
 </div>
 
 

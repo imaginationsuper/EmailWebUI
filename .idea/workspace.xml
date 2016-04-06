@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="1110">
+              <caret line="75" column="96" selection-start-line="75" selection-start-column="96" selection-end-line="75" selection-end-column="96" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interaction.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interaction.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/file/interaction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="27">
               <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
               <folding />
             </state>
@@ -315,7 +315,7 @@
       <updated>1459702508974</updated>
       <workItem from="1459702511164" duration="25619000" />
       <workItem from="1459897006981" duration="2565000" />
-      <workItem from="1459901320067" duration="3049000" />
+      <workItem from="1459901320067" duration="3901000" />
     </task>
     <task id="LOCAL-00001" summary="update code by separating scripts from html">
       <created>1459901553597</created>
@@ -324,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1459901553597</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update code create new label">
+      <created>1459904443353</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1459904443353</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31233000" />
+    <option name="totallyTimeSpent" value="32085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -358,7 +365,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update code by separating scripts from html" />
-    <option name="LAST_COMMIT_MESSAGE" value="update code by separating scripts from html" />
+    <MESSAGE value="update code create new label" />
+    <option name="LAST_COMMIT_MESSAGE" value="update code create new label" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -475,18 +483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/interaction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="1110">
+          <caret line="75" column="96" selection-start-line="75" selection-start-column="96" selection-end-line="75" selection-end-column="96" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -496,6 +496,14 @@
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/interaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
