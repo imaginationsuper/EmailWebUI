@@ -34,7 +34,7 @@
             <h2>New Mail</h2>
         </div>
         <div class="w3-container">
-            <form class="w3-container" action="MAILTO:" method="post" enctype="text/plain">
+            <form class="w3-container">
                 <p>
                     <label>To:</label>
                     <input id="dest_address" class="w3-input w3-border" type="text">
@@ -48,7 +48,7 @@
                 </p>
                 <p>
                     <a class="w3-btn w3-large w3-red" onclick="document.getElementById('new_mail').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
-                    <input class="w3-btn w3-large w3-right w3-light-green" onclick="sendMail()" type="submit" value="Send"></input>
+                    <input class="w3-btn w3-large w3-right w3-light-green" onclick="sendMail()" type="submit" value="Send">
                 </p>
             </form>
         </div>
@@ -69,78 +69,10 @@
 
 </div>
 
-<script>
-    var openInbox = document.getElementById("Inbox");
-    openInbox.click();
+<!-- Script for buttons and links -->
+<script src="../file/emailbox.js" type="text/javascript"></script>
+<script src="../file/interaction.js;" type="text/javascript"></script>
 
-    var mails = {
-        "Inbox":
-                [
-                    {"index":"0", "email":"name1", "sender":"Jim", "subject":"hello","body":"hello world in email.", "category":"work"},
-                    {"index":"1", "email":"name2", "sender":"Kate", "subject":"world","body":"hello world again. This is to make the mail longer. Stop here!", "category":"party"}
-                ]
-        };
-
-    function to_close(){
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-        document.getElementsByClassName("w3-overlay")[0].style.display = "none";
-    }
-    function to_open(){
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-        document.getElementsByClassName("w3-overlay")[0].style.display = "block";
-    }
-    function showMail(id){
-        subid = id + 'List';
-        var cur_div = document.getElementById(subid);
-        /*var xmlhttp = new XMLHttpRequest();
-        var url = "../file/mailbox.json";
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                mails = JSON.parse(xmlhttp.responseText);
-            }
-        };
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();*/
-        var numOfEmail = mails[id].length;
-        var cur_mail = mails[id];
-        /*for (var node in cur_div.childNodes){
-            cur_div.removeChild(node);
-        }*/
-        for (var i=0; i<numOfEmail; i++){
-            var new_mail = document.createElement('a');
-            new_mail.setAttribute("href","javascript:void(0)");
-            new_mail.setAttribute("id", id+"-Email-"+cur_mail[i].index);
-            new_mail.setAttribute("class", "w3-boder-bottom email w3-hover-light-grey");
-            new_mail.setAttribute("onclick", "openMail(this.id);to_close();");
-            var new_mail_content = document.createElement('div');
-            new_mail_content.setAttribute('class', "w3-container");
-            new_mail_content.innerHTML = "<span class='w3-opacity w3-large'>" + cur_mail[i].sender + "</span><h5>" + cur_mail[i].subject +"</h5><span class='w3-tag w3-light-green'>"+cur_mail[i].category+"</span><p>"+ cur_mail[i].body.substr(0,30) +"...</p>";
-            new_mail.appendChild(new_mail_content);
-            cur_div.appendChild(new_mail);
-        }
-        document.getElementById(subid).classList.toggle("w3-show");
-        document.getElementById(subid).previousElementSibling.classList.toggle("w3-red");
-    }
-    function openMail(id) {
-        var mail_display = document.getElementById("mail_display");
-        mail_display.style.display = "none";
-        var id_text = id.split('-');
-        var mail_index = id_text[id_text.length-1];
-        var mail_cat = id_text[0];
-        var subject =  "<h2>" + mails[mail_cat][mail_index].subject + "</h2>";
-        var buttons = "<a class='w3-btn w3-light-grey'>Reply  <i class='fa fa-mail-reply'></i></a> <a class='w3-btn w3-light-grey'>Forward  <i class='fa fa-arrow-right'></i></a>";
-        var content = "<pre>" + mails[mail_cat][mail_index].body + "</pre>";
-        mail_display.style.display = "block";
-        mail_display.innerHTML = "<br>" + subject + "<br>" + buttons + "<hr>" + content;
-    }
-    function sendMail(){
-        // not work
-        var dest_address = document.getElementById("dest_address").valueOf();
-        var subject = document.getElementById("subject").valueOf();
-        var body = document.getElementById("body").valueOf();
-        var message = subject + "\n\n" + body;
-    }
-</script>
 
 </body>
 </html>
