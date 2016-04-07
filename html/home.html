@@ -69,10 +69,10 @@
             <form class="w3-container">
                 <p>
                     <label>New Label:</label>
-                    <input id="label_name" class="w3-input w3-border" type="text">
+                    <input id="label_name" name="label_input" class="w3-input w3-border" type="text" placeholder="Enter the new label">
                 </p>
                 <p>
-                    <a class="w3-btn w3-large w3-red" onclick="document.getElementById('new_label').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+                    <a class="w3-btn w3-large w3-red" onclick="document.getElementById('new_label').style.display='none'" onkeypress="addNewLabel()">Cancel <i class="fa fa-remove"></i></a>
                     <input class="w3-btn w3-large w3-right w3-light-green" onclick="addNewLabel()" type="button" value="Create">
                 </p>
             </form>
@@ -98,6 +98,13 @@
 <!-- Script for buttons and links -->
 <script src="../file/emailbox.js" type="text/javascript"></script>
 <script src="../file/interaction.js;" type="text/javascript"></script>
+<script>
+    document.getElementById('label_input').addEventListener('keypress', function(event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+        }
+    });
+</script>
 
 
 </body>

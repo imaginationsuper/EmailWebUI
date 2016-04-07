@@ -5,6 +5,8 @@ var openInbox = document.getElementById("Inbox");
 openInbox.click();
 
 var mails = data;
+var callNewMailCode = "document.getElementById('new_mail').style.display='block'";
+var callMoveCode = "changeLabel()";
 
 function to_close(){
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
@@ -44,7 +46,8 @@ function openMail(id) {
     var mail_index = id_text[id_text.length-1];
     var mail_cat = id_text[0];
     var subject =  "<h2>" + mails[mail_cat][mail_index].subject + "</h2>";
-    var buttons = "<a class='w3-btn w3-light-grey'>Reply  <i class='fa fa-mail-reply'></i></a> <a class='w3-btn w3-light-grey'>Forward  <i class='fa fa-arrow-right'></i></a>";
+    var buttons = "<a class='w3-btn w3-light-grey' onclick=" + callNewMailCode + ">Reply  <i class='fa fa-mail-reply'></i></a> <a class='w3-btn w3-light-grey' onclick=" + callNewMailCode
+        + ">Forward  <i class='fa fa-arrow-right'></i></a> <a class='w3-btn w3-light-grey' onclick=" + callMoveCode + ">Change Label  <i class='fa fa-arrow-right'></i></a>";
     var content = "<pre>" + mails[mail_cat][mail_index].body + "</pre>";
     mail_display.style.display = "block";
     mail_display.innerHTML = "<br>" + subject + "<br>" + buttons + "<hr>" + content;
@@ -73,8 +76,9 @@ function addNewLabel(){
     new_label.appendChild(new_label_btn);
     new_label.appendChild(new_label_list);
     document.getElementById("LabelList").appendChild(new_label);
-    /*data[label_name] = [];
-    var fs = require("fs");
+    mails[label_name] = [];
+    document.getElementById("label_name").value = "";
+    /*var fs = require("fs");
     fs.writeFile("emailbox.json", JSON.stringify(data, null, 4), function(err){
         if (err){
             console.log(err);
